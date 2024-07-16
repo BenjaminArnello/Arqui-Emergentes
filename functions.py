@@ -5,6 +5,7 @@ import json
 from flask import make_response 
 from collections import defaultdict
 import time
+
 def create_admin(username, password):
     
     db = get_db()
@@ -202,7 +203,7 @@ def get_sensors(apikey):
 
             return make_response(response, 200)
         else:
-            return make_response("No locations found for the given company", 404)
+            return make_response("No existen ubicaciones para esta compañia", 404)
     else:
         return make_response("API KEY incorrecta", 401)
 
