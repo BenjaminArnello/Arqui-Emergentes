@@ -47,6 +47,7 @@ def create_tables():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             sensor_id INTEGER NOT NULL,
             data TEXT NOT NULL,
+            time INTEGER  NOT NULL,
             FOREIGN KEY (sensor_id) REFERENCES sensor(sensor_id)
         )
         """
